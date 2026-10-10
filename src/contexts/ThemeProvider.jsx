@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { ThemeContext } from "./contexts";
-import { getSystemTheme } from "../utils/themeUtilty/themeUtilty";
+import { getSystemTheme } from "../utils/themeUtility/themeUtility.js";
 
 const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(

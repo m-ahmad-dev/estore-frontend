@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 import styles from "./ProductCard.module.css";
-import IsDark from "../../../../utils/themeUtilty/isDark.jsx";
+import IsDark from "../../../../utils/themeUtility/isDark.jsx";
 import WishlistButton from "../../../wishlist/components/WishlistButton.jsx";
 
 const ProductCard = ({ product }) => {

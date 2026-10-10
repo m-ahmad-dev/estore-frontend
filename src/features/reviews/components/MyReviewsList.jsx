@@ -6,7 +6,7 @@ import useDeleteReview from "../hooks/useDeleteReview";
 import ReviewCard from "./ReviewCard";
 import ReviewForm from "./ReviewForm";
 import styles from "./MyReviewsList.module.css";
-import IsDark from "../../../utils/themeUtilty/IsDark.jsx";
+import IsDark from "../../../utils/themeUtility/isDark.jsx";
 
 const STATUS_FILTERS = [
   { value: "", label: "All" },

@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { ArrowLeft, Home, MapPin, ArrowRight } from "lucide-react";
 import styles from "./NotFound.module.css";
-import IsDark from "../../utils/themeUtilty/isDark.jsx";
+import IsDark from "../../utils/themeUtility/isDark.jsx";
 
 const NotFound = () => {
   const navigate = useNavigate();

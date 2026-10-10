@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import styles from "./CategorySection.module.css";
-import IsDark from "../../../../utils/themeUtilty/isDark.jsx";
+import IsDark from "../../../../utils/themeUtility/isDark.jsx";
 
 const CategorySection = ({ categories = [], isLoading, isError }) => {
   const isDark = IsDark();

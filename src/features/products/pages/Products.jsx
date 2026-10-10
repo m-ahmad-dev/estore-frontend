@@ -7,7 +7,7 @@ import useCategoryDetails from "../../categories/hooks/useCategoryDetails";
 import styles from "./Products.module.css";
 import ProductFilters from "../components/products-filter/ProductsFilter.jsx";
 import ProductCard from "../components/products-card/ProductCard.jsx";
-import IsDark from "../../../utils/themeUtilty/isDark.jsx";
+import IsDark from "../../../utils/themeUtility/isDark.jsx";
 
 const DEFAULT_FILTERS = {
   category: "",

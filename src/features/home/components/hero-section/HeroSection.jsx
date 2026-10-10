@@ -1,7 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-import IsDark from "../../../../utils/themeUtilty/isDark";
+import IsDark from "../../../../utils/themeUtility/isDark";
 import styles from "./HeroSection.module.css";
 
 const HeroSection = () => {

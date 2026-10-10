@@ -1,6 +1,6 @@
 import { Star, Pencil, Trash2, Package } from "lucide-react";
 import styles from "./ReviewCard.module.css";
-import IsDark from "../../../utils/themeUtilty/IsDark.jsx";
+import IsDark from "../../../utils/themeUtility/isDark.jsx";
 
 const STATUS_STYLES = {
   PENDING: styles.pending,

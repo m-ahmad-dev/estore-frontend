@@ -21,8 +21,8 @@ import useCountries from "../../countries/hooks/useCountries";
 import ProfileForm from "../components/ProfileForm";
 import AddressList from "../../address/components/AddressList";
 import MyReviewsList from "../../reviews/components/MyReviewsList";
-import IsDark from "../../../utils/themeUtilty/IsDark.jsx";
 import styles from "./Profile.module.css";
+import IsDark from "../../../utils/themeUtility/isDark.jsx";
 
 const TABS = [
   { id: "profile", label: "Profile", icon: User },

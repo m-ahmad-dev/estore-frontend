@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ChevronDown, ChevronRight, RotateCcw } from "lucide-react";
 
 import styles from "./ProductsFilter.module.css";
-import IsDark from "../../../../utils/themeUtilty/isDark.jsx";
+import IsDark from "../../../../utils/themeUtility/isDark.jsx";
 import useRootCategories from "../../../categories/hooks/useRootCategories.js";
 import useCategoryDetails from "../../../categories/hooks/useCategoryDetails.js";
 

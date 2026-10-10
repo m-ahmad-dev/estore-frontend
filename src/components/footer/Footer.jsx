@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-import IsDark from "../../utils/themeUtilty/isDark";
+import IsDark from "../../utils/themeUtility/isDark";
 import Logo from "../logo/Logo";
 
 import styles from "./Footer.module.css";

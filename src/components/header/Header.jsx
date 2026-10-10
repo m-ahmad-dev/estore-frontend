@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { User, Heart, Search, ShoppingCart } from "lucide-react";
 
 import Logo from "../logo/Logo.jsx";
-import IsDark from "../../utils/themeUtilty/isDark";
+import IsDark from "../../utils/themeUtility/isDark";
 import { selectIsAuthenticated } from "../../features/auth/authSelectors";
 import useCart from "../../features/cart/hooks/useCart";
 import useWishlist from "../../features/wishlist/hooks/useWishlist";

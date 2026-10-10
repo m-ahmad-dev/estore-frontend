@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import IsDark from "../../utils/themeUtilty/isDark";
+import IsDark from "../../utils/themeUtility/isDark";
 
 const Logo = () => {
   const isDark = IsDark();
