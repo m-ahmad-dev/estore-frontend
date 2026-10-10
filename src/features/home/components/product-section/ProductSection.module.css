@@ -1,0 +1,307 @@
+.section {
+  padding: 100px 0;
+  transition:
+    background-color 300ms ease,
+    color 300ms ease;
+}
+
+.light {
+  background-color: #f5f5f4;
+  color: #292524;
+}
+
+.dark {
+  background-color: #1c1917;
+  color: #f4f4f5;
+}
+
+.container {
+  width: min(1200px, calc(100% - 80px));
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 45px;
+}
+
+.eyebrow {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.light .eyebrow {
+  color: #78716c;
+}
+
+.dark .eyebrow {
+  color: #a8a29e;
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.description {
+  max-width: 500px;
+  margin: 14px 0 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.light .description {
+  color: #78716c;
+}
+
+.dark .description {
+  color: #a8a29e;
+}
+
+.viewAll {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 10px 0;
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.light .viewAll {
+  color: #44403c;
+}
+
+.dark .viewAll {
+  color: #d6d3d1;
+}
+
+.viewAll:hover {
+  opacity: 0.7;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 250ms ease,
+    background-color 300ms ease;
+}
+
+.light .card {
+  background-color: #fafaf9;
+}
+
+.dark .card {
+  background-color: #292524;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.imageWrapper {
+  position: relative;
+  aspect-ratio: 1 / 1.12;
+  overflow: hidden;
+}
+
+.light .imageWrapper {
+  background-color: #e7e5e4;
+}
+
+.dark .imageWrapper {
+  background-color: #34302d;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
+
+.card:hover .image {
+  transform: scale(1.04);
+}
+
+.cardContent {
+  padding: 18px;
+}
+
+.category {
+  display: block;
+  margin-bottom: 7px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.light .category {
+  color: #78716c;
+}
+
+.dark .category {
+  color: #a8a29e;
+}
+
+.productName {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.price {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.reviews {
+  font-size: 11px;
+}
+
+.light .reviews {
+  color: #78716c;
+}
+
+.dark .reviews {
+  color: #a8a29e;
+}
+
+.skeletonCard {
+  overflow: hidden;
+}
+
+.light .skeletonCard {
+  background-color: #fafaf9;
+}
+
+.dark .skeletonCard {
+  background-color: #292524;
+}
+
+.skeletonImage {
+  aspect-ratio: 1 / 1.12;
+}
+
+.light .skeletonImage,
+.light .skeletonLine,
+.light .skeletonSmallLine {
+  background-color: #e7e5e4;
+}
+
+.dark .skeletonImage,
+.dark .skeletonLine,
+.dark .skeletonSmallLine {
+  background-color: #34302d;
+}
+
+.skeletonLine {
+  width: 70%;
+  height: 14px;
+  margin: 20px 18px 10px;
+}
+
+.skeletonSmallLine {
+  width: 40%;
+  height: 10px;
+  margin: 0 18px 20px;
+}
+
+.empty,
+.error {
+  padding: 70px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.light .empty,
+.light .error {
+  color: #78716c;
+}
+
+.dark .empty,
+.dark .error {
+  color: #a8a29e;
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: 70px 0;
+  }
+
+  .container {
+    width: min(100% - 40px, 1200px);
+  }
+
+  .header {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .cardContent {
+    padding: 14px;
+  }
+
+  .cardFooter {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media (max-width: 450px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cardFooter {
+    align-items: center;
+    flex-direction: row;
+  }
+}

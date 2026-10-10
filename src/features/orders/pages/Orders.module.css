@@ -1,0 +1,167 @@
+.page {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  margin: 0 0 5px;
+
+  color: var(--primary-color, #2563eb);
+
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.header h1 {
+  margin: 0;
+
+  font-size: clamp(1.7rem, 3vw, 2.2rem);
+}
+
+.description {
+  margin: 7px 0 0;
+
+  color: var(--muted-text, #6b7280);
+
+  font-size: 0.9rem;
+}
+
+.filter {
+  min-width: 170px;
+  height: 42px;
+
+  padding: 0 12px;
+
+  border: 1px solid var(--border-color, #d1d5db);
+  border-radius: 9px;
+
+  background: var(--surface-color, #ffffff);
+  color: inherit;
+
+  font: inherit;
+  font-size: 0.85rem;
+}
+
+.orders {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.refreshing {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin: -12px 0 14px;
+
+  color: var(--muted-text, #6b7280);
+
+  font-size: 0.78rem;
+}
+
+.state,
+.empty {
+  min-height: 360px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.state h1,
+.empty h2 {
+  margin: 15px 0 6px;
+
+  font-size: 1.1rem;
+}
+
+.state p,
+.empty p {
+  max-width: 420px;
+
+  margin: 0;
+
+  color: var(--muted-text, #6b7280);
+
+  font-size: 0.86rem;
+}
+
+.state button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  margin-top: 18px;
+  padding: 9px 14px;
+
+  border: 0;
+  border-radius: 8px;
+
+  background: var(--primary-color, #2563eb);
+  color: #ffffff;
+
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.empty {
+  padding: 50px 20px;
+
+  border: 1px dashed var(--border-color, #d1d5db);
+  border-radius: 14px;
+
+  color: var(--muted-text, #6b7280);
+}
+
+.spinner,
+.smallSpinner {
+  animation: spin 0.9s linear infinite;
+}
+
+.smallSpinner {
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 650px) {
+  .page {
+    padding: 28px 15px;
+  }
+
+  .header {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .filter {
+    width: 100%;
+  }
+}

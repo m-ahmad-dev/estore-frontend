@@ -1,0 +1,373 @@
+/* ========================================
+   Base & Theme
+======================================== */
+.page {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1.25rem 2.5rem;
+  overflow: hidden;
+}
+
+.pageLight {
+  background: #fafafa;
+  color: #18181b;
+}
+
+.pageDark {
+  background: #09090b;
+  color: #fafafa;
+}
+
+/* ========================================
+   Decorative shapes
+======================================== */
+.bgShapeOne,
+.bgShapeTwo {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bgShapeOne {
+  width: min(70vw, 28rem);
+  height: min(70vw, 28rem);
+  top: -12%;
+  right: -8%;
+  background: rgba(99, 102, 241, 0.13);
+}
+
+.bgShapeTwo {
+  width: min(60vw, 22rem);
+  height: min(60vw, 22rem);
+  bottom: -10%;
+  left: -10%;
+  background: rgba(244, 63, 94, 0.1);
+}
+
+.pageDark .bgShapeOne {
+  background: rgba(99, 102, 241, 0.18);
+}
+
+.pageDark .bgShapeTwo {
+  background: rgba(244, 63, 94, 0.12);
+}
+
+/* ========================================
+   Container
+======================================== */
+.container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 42rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+/* ========================================
+   Large 404
+======================================== */
+.heroNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15em;
+  line-height: 1;
+  user-select: none;
+}
+
+.digit {
+  font-size: clamp(5.5rem, 18vw, 9.5rem);
+  font-weight: 800;
+  letter-spacing: -0.06em;
+  line-height: 1;
+  background: linear-gradient(
+    165deg,
+    rgba(24, 24, 27, 0.12) 0%,
+    rgba(24, 24, 27, 0.04) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(24, 24, 27, 0.18);
+}
+
+.pageDark .digit {
+  background: linear-gradient(
+    165deg,
+    rgba(250, 250, 250, 0.14) 0%,
+    rgba(250, 250, 250, 0.04) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(250, 250, 250, 0.16);
+}
+
+.digitCenter {
+  position: relative;
+}
+
+.digitCenter::after {
+  content: "";
+  position: absolute;
+  inset: 18% 12%;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(24, 24, 27, 0.2);
+  animation: spin 18s linear infinite;
+}
+
+.pageDark .digitCenter::after {
+  border-color: rgba(250, 250, 250, 0.18);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================================
+   Content
+======================================== */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.statusLight {
+  background: #f4f4f5;
+  color: #52525b;
+  border: 1px solid #e4e4e7;
+}
+
+.statusDark {
+  background: #18181b;
+  color: #a1a1aa;
+  border: 1px solid #27272a;
+}
+
+.statusIcon {
+  width: 0.875rem;
+  height: 0.875rem;
+  flex-shrink: 0;
+}
+
+.heading {
+  margin: 0;
+  font-size: clamp(1.5rem, 4.5vw, 2.125rem);
+  font-weight: 650;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+  max-width: 20ch;
+}
+
+.lead {
+  margin: 0;
+  font-size: clamp(0.9375rem, 2.2vw, 1.0625rem);
+  line-height: 1.65;
+  max-width: 34rem;
+}
+
+.leadLight {
+  color: #52525b;
+}
+
+.leadDark {
+  color: #a1a1aa;
+}
+
+/* ========================================
+   Actions
+======================================== */
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  width: 100%;
+}
+
+.btnPrimary,
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.875rem;
+  padding: 0.7rem 1.35rem;
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition:
+    transform 150ms ease,
+    background-color 150ms ease,
+    box-shadow 150ms ease,
+    opacity 150ms ease;
+}
+
+.btnIcon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+.btnPrimaryLight {
+  background: #18181b;
+  color: #fafafa;
+  box-shadow: 0 4px 14px rgba(24, 24, 27, 0.18);
+}
+
+.btnPrimaryLight:hover {
+  background: #27272a;
+  transform: translateY(-1px);
+}
+
+.btnPrimaryDark {
+  background: #fafafa;
+  color: #09090b;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.btnPrimaryDark:hover {
+  background: #e4e4e7;
+  transform: translateY(-1px);
+}
+
+.btnSecondaryLight {
+  background: transparent;
+  color: #3f3f46;
+  border: 1.5px solid #d4d4d8;
+}
+
+.btnSecondaryLight:hover {
+  background: #f4f4f5;
+  border-color: #a1a1aa;
+  transform: translateY(-1px);
+}
+
+.btnSecondaryDark {
+  background: transparent;
+  color: #d4d4d8;
+  border: 1.5px solid #3f3f46;
+}
+
+.btnSecondaryDark:hover {
+  background: #18181b;
+  border-color: #52525b;
+  transform: translateY(-1px);
+}
+
+.btnPrimary:active,
+.btnSecondary:active {
+  transform: translateY(0);
+}
+
+/* ========================================
+   Responsive – Tablet
+======================================== */
+@media (min-width: 640px) {
+  .page {
+    padding: 2rem 1.5rem 3rem;
+  }
+
+  .container {
+    gap: 2.25rem;
+  }
+
+  .actions {
+    gap: 0.875rem;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    min-width: 10.5rem;
+  }
+}
+
+/* ========================================
+   Responsive – Desktop
+======================================== */
+@media (min-width: 1024px) {
+  .page {
+    padding: 2.5rem 2rem 3.5rem;
+  }
+
+  .container {
+    max-width: 46rem;
+    gap: 2.5rem;
+  }
+
+  .content {
+    gap: 1.5rem;
+  }
+
+  .bgShapeOne {
+    width: 32rem;
+    height: 32rem;
+  }
+
+  .bgShapeTwo {
+    width: 26rem;
+    height: 26rem;
+  }
+}
+
+/* ========================================
+   Responsive – Small phones
+======================================== */
+@media (max-width: 380px) {
+  .actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+  }
+
+  .heroNumber {
+    gap: 0.05em;
+  }
+}
+
+/* Reduce motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .digitCenter::after {
+    animation: none;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    transition: none;
+  }
+}

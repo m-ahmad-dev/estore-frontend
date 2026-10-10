@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Comfortaa:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-xs: 470px; /* Define your custom breakpoint value */
+}
+
+/* Base styles */
+:root {
+  --color-background: #ffffff;
+  --color-foreground: #000000;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --color-background: #23231f;
+  --color-foreground: #ffffff;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  pointer-events: auto; /* This allows the cursor change to work */
+}
+
+/* Ensure Tailwind dark mode classes work with our system */
+.dark {
+  color-scheme: dark;
+}
+
+.light {
+  color-scheme: light;
+}

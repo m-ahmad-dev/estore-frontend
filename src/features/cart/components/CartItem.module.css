@@ -1,0 +1,200 @@
+.item {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr) auto;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid currentColor;
+  border-color: rgb(228 228 231);
+}
+
+.imageButton {
+  width: 110px;
+  height: 110px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.imageButton:disabled {
+  cursor: default;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background: rgb(244 244 245);
+  color: rgb(113 113 122);
+  font-size: 13px;
+}
+
+.details {
+  min-width: 0;
+}
+
+.name {
+  display: block;
+  max-width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+.name:disabled {
+  cursor: default;
+}
+
+.attributes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin-top: 8px;
+  color: rgb(113 113 122);
+  font-size: 13px;
+}
+
+.sku {
+  margin: 8px 0 0;
+  color: rgb(113 113 122);
+  font-size: 12px;
+}
+
+.price {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.quantityControl {
+  display: flex;
+  align-items: center;
+  height: 38px;
+  border: 1px solid rgb(212 212 216);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.quantityControl button {
+  width: 38px;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.quantityControl button:hover:not(:disabled) {
+  background: rgb(244 244 245);
+}
+
+.quantityControl button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.quantityControl span {
+  min-width: 34px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.lineTotal {
+  min-width: 100px;
+  text-align: right;
+  font-weight: 600;
+}
+
+.removeButton {
+  display: grid;
+  place-items: center;
+  padding: 8px;
+  border: 0;
+  background: transparent;
+  color: rgb(113 113 122);
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.removeButton:hover:not(:disabled) {
+  background: rgb(244 244 245);
+  color: rgb(220 38 38);
+}
+
+.removeButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.error {
+  margin: 8px 0 0;
+  color: rgb(220 38 38);
+  font-size: 13px;
+}
+
+@media (max-width: 768px) {
+  .item {
+    grid-template-columns: 82px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .imageButton {
+    width: 82px;
+    height: 82px;
+  }
+
+  .actions {
+    grid-column: 2;
+    justify-content: space-between;
+  }
+
+  .lineTotal {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .item {
+    grid-template-columns: 70px minmax(0, 1fr);
+  }
+
+  .imageButton {
+    width: 70px;
+    height: 70px;
+  }
+
+  .name {
+    font-size: 15px;
+  }
+
+  .actions {
+    gap: 8px;
+  }
+
+  .lineTotal {
+    font-size: 14px;
+  }
+}

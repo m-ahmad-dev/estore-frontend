@@ -1,0 +1,51 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 30px;
+  padding: 0 10px;
+
+  border-radius: 999px;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
+
+  white-space: nowrap;
+}
+
+.PENDING {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.CONFIRMED {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.PROCESSING {
+  background: #f5f3ff;
+  color: #6d28d9;
+}
+
+.SHIPPED {
+  background: #ecfeff;
+  color: #0e7490;
+}
+
+.DELIVERED {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.CANCELLED {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.default {
+  background: #f3f4f6;
+  color: #374151;
+}

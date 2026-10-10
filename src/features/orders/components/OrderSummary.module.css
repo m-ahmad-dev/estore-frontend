@@ -1,0 +1,265 @@
+.summary {
+  width: 100%;
+  overflow: hidden;
+
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 18px;
+
+  background: var(--surface-color, #ffffff);
+  box-shadow: 0 8px 30px rgb(0 0 0 / 4%);
+}
+
+/* ================================
+   Header
+================================ */
+
+.header {
+  padding: 18px 20px;
+
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+}
+
+.titleGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.titleIcon {
+  display: grid;
+  place-items: center;
+
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  border-radius: 10px;
+
+  background: var(--primary-color, #111827);
+  color: #ffffff;
+}
+
+.titleGroup h2 {
+  margin: 0;
+
+  color: var(--text-color, #111827);
+
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.titleGroup span {
+  display: block;
+
+  margin-top: 3px;
+
+  color: var(--muted-text, #6b7280);
+
+  font-size: 0.78rem;
+}
+
+/* ================================
+   Items
+================================ */
+
+.items {
+  padding: 4px 20px;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+
+  padding: 16px 0;
+
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+.itemInfo {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.itemInfo > strong {
+  overflow: hidden;
+
+  color: var(--text-color, #111827);
+
+  font-size: 0.88rem;
+  font-weight: 600;
+  line-height: 1.4;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.variant {
+  margin-top: 3px;
+
+  color: var(--muted-text, #6b7280);
+
+  font-size: 0.76rem;
+}
+
+.itemMeta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  margin-top: 7px;
+
+  color: var(--muted-text, #6b7280);
+
+  font-size: 0.76rem;
+}
+
+.dot {
+  opacity: 0.5;
+}
+
+.itemTotal {
+  flex-shrink: 0;
+
+  color: var(--text-color, #111827);
+
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+/* ================================
+   Pricing rows
+================================ */
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+
+  padding: 18px 20px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.row > span {
+  color: var(--muted-text, #6b7280);
+
+  font-size: 0.84rem;
+}
+
+.row > strong {
+  color: var(--text-color, #111827);
+
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.labelWithIcon {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.discount {
+  color: #16a34a !important;
+}
+
+/* ================================
+   Final total
+================================ */
+
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+
+  margin: 0 12px 12px;
+  padding: 18px 16px;
+
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 13px;
+
+  background: var(--background-color, #f8fafc);
+}
+
+.total > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.total span {
+  color: var(--text-color, #111827);
+
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.total small {
+  color: var(--muted-text, #6b7280);
+
+  font-size: 0.7rem;
+}
+
+.total > strong {
+  color: var(--text-color, #111827);
+
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* ================================
+   Responsive
+================================ */
+
+@media (max-width: 480px) {
+  .header {
+    padding: 16px;
+  }
+
+  .items {
+    padding: 4px 16px;
+  }
+
+  .rows {
+    padding: 16px;
+  }
+
+  .item {
+    gap: 12px;
+  }
+
+  .itemInfo > strong {
+    white-space: normal;
+  }
+
+  .itemMeta {
+    font-size: 0.72rem;
+  }
+
+  .total {
+    margin: 0 10px 10px;
+    padding: 16px 14px;
+  }
+
+  .total > strong {
+    font-size: 1.05rem;
+  }
+}

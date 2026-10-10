@@ -1,0 +1,140 @@
+.toggleGroup {
+  position: fixed;
+  z-index: 50;
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  right: max(1rem, env(safe-area-inset-right));
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.25rem;
+  border: 1px solid var(--border-color, #d4d4d8);
+  border-radius: 999px;
+  background-color: var(--surface-soft, #f5f5f4);
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.06),
+    0 4px 12px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+/* Mobile-first: icon only */
+.option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-muted, #71717a);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.option:hover {
+  color: var(--text-color, #18181b);
+}
+
+.option:active {
+  transform: scale(0.96);
+}
+
+.active {
+  background-color: var(--accent-color, #18181b);
+  color: var(--accent-contrast, #f8fafc);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.18);
+}
+
+.active:hover {
+  color: var(--accent-contrast, #f8fafc);
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+}
+
+/* Hide labels on small screens */
+.label {
+  display: none;
+}
+
+/* Tablet and up: show labels, slightly larger */
+@media (min-width: 640px) {
+  .toggleGroup {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    gap: 0.3rem;
+    padding: 0.3rem;
+  }
+
+  .option {
+    min-width: unset;
+    min-height: 2.25rem;
+    padding: 0.45rem 0.75rem;
+  }
+
+  .label {
+    display: inline;
+  }
+
+  .option:hover {
+    transform: translateY(-1px);
+  }
+
+  .option:active {
+    transform: translateY(0);
+  }
+}
+
+/* Large screens: comfortable spacing */
+@media (min-width: 1024px) {
+  .toggleGroup {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+/* Dark mode */
+:global(.dark) .toggleGroup {
+  background-color: rgba(24, 24, 27, 0.85);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+:global(.dark) .option {
+  color: #a1a1aa;
+}
+
+:global(.dark) .option:hover {
+  color: #f4f4f5;
+}
+
+:global(.dark) .active {
+  background-color: #f4f4f5;
+  color: #18181b;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+:global(.dark) .active:hover {
+  color: #18181b;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .option {
+    transition: none;
+  }
+}

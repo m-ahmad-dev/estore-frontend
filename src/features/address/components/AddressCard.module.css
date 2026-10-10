@@ -1,0 +1,151 @@
+.card {
+  border: 1px solid;
+  border-color: rgb(228 228 231);
+  border-radius: 10px;
+  padding: 18px;
+  background: rgb(255 255 255);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+}
+
+.card:hover {
+  border-color: rgb(212 212 216);
+}
+
+.selectable {
+  cursor: pointer;
+}
+
+.selectable:hover {
+  border-color: rgb(161 161 170);
+}
+
+.selected {
+  border-color: rgb(63 63 70);
+  box-shadow: 0 0 0 1px rgb(63 63 70);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.titleGroup {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: rgb(244 244 245);
+  color: rgb(63 63 70);
+}
+
+.titleGroup h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: rgb(39 39 42);
+}
+
+.defaultBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 5px;
+  color: rgb(82 82 91);
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.radio {
+  width: 19px;
+  height: 19px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(161 161 170);
+  border-radius: 50%;
+}
+
+.radioSelected {
+  border-color: rgb(39 39 42);
+}
+
+.radioSelected span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgb(39 39 42);
+}
+
+.address {
+  margin-top: 15px;
+  padding-left: 44px;
+}
+
+.address p {
+  margin: 3px 0;
+  color: rgb(82 82 91);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  padding-left: 44px;
+}
+
+.actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 0;
+}
+
+.actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.editButton {
+  color: rgb(63 63 70);
+}
+
+.deleteButton {
+  color: rgb(185 28 28);
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 15px;
+  }
+
+  .address {
+    padding-left: 0;
+  }
+
+  .actions {
+    padding-left: 0;
+  }
+}

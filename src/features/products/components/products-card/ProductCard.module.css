@@ -1,0 +1,138 @@
+.card {
+  border: 1px solid;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.cardLight {
+  background: #ffffff;
+  border-color: #e4e4e7;
+  color: #27272a;
+}
+
+.cardDark {
+  background: #1c1917;
+  border-color: #3f3f46;
+  color: #f4f4f5;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #f4f4f5;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.03);
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.placeholderLight {
+  background: #f4f4f5;
+  color: #71717a;
+}
+
+.placeholderDark {
+  background: #292524;
+  color: #a1a1aa;
+}
+
+.content {
+  padding: 14px;
+}
+
+.category {
+  margin: 0 0 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.name {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.price {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.reviews {
+  font-size: 11px;
+}
+
+.textMutedLight {
+  color: #71717a;
+}
+
+.textMutedDark {
+  color: #a1a1aa;
+}
+
+.wishlistAction {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9999px;
+
+  background: rgba(255, 255, 255, 0.92);
+  color: #27272a;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+
+  backdrop-filter: blur(6px);
+
+  z-index: 2;
+}

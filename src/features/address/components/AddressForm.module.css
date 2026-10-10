@@ -1,0 +1,155 @@
+.form {
+  width: 100%;
+  padding: 22px;
+  border: 1px solid rgb(228 228 231);
+  border-radius: 12px;
+  background: rgb(255 255 255);
+}
+
+.heading {
+  margin-bottom: 22px;
+}
+
+.heading h2 {
+  margin: 0;
+  color: rgb(39 39 42);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.heading p {
+  margin: 5px 0 0;
+  color: rgb(113 113 122);
+  font-size: 13px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.fullWidth {
+  margin-top: 16px;
+}
+
+.field {
+  min-width: 0;
+}
+
+.field label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  color: rgb(63 63 70);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.field label small {
+  color: rgb(161 161 170);
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 11px;
+  border: 1px solid rgb(212 212 216);
+  border-radius: 7px;
+  outline: none;
+  background: rgb(255 255 255);
+  color: rgb(39 39 42);
+  font-size: 13px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: rgb(113 113 122);
+  box-shadow: 0 0 0 2px rgb(228 228 231);
+}
+
+.field input:disabled,
+.field select:disabled {
+  background: rgb(244 244 245);
+  cursor: not-allowed;
+}
+
+.error {
+  margin: 5px 0 0;
+  color: rgb(185 28 28);
+  font-size: 11px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  color: rgb(63 63 70);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.checkbox input {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.actions button {
+  min-height: 38px;
+  padding: 0 16px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.actions button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.cancelButton {
+  border: 1px solid rgb(212 212 216);
+  background: transparent;
+  color: rgb(63 63 70);
+}
+
+.submitButton {
+  border: 1px solid rgb(39 39 42);
+  background: rgb(39 39 42);
+  color: white;
+}
+
+@media (max-width: 640px) {
+  .form {
+    padding: 16px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions {
+    flex-direction: column-reverse;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}
