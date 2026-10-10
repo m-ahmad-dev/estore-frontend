@@ -1,5 +1,5 @@
 import useTheme from "../../hooks/useTheme";
-import { getSystemTheme } from "./themeUtilty";
+import { getSystemTheme } from "./themeUtility";
 
 const IsDark = () => {
   const { theme } = useTheme();

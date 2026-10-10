@@ -6,7 +6,7 @@ import ProductGallery from "../components/product-detail/ProductGallery";
 import ProductInfo from "../components/product-detail/ProductInfo";
 
 import styles from "./ProductDetail.module.css";
-import IsDark from "../../../utils/themeUtilty/isDark.jsx";
+import IsDark from "../../../utils/themeUtility/isDark.jsx";
 
 const ProductDetail = () => {
   const isDark = IsDark();
